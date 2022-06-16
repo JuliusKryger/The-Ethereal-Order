@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 390be6d80d54e524d93fab9805dc2dae
+=======
+guid: 1a0734dd55031104c845150118c42149
+>>>>>>> AStar
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 15600000
