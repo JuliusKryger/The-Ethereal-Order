@@ -5,8 +5,6 @@ using UnityEngine.AI;
 
 public class MoveToTarget : Leaf<Context>
 {
-    public Transform[] ResourceNodes;
-    public NavMeshAgent Agent;
     public override Result Run(Context context) 
     {
         float closestResourceNodeDistance = float.MaxValue;
@@ -20,27 +18,29 @@ public class MoveToTarget : Leaf<Context>
         }
         if (context.navMeshAgent == null) 
         {
-            Debug.LogError("No NavMeshAgent set on Context");
+            Debug.LogError("No navMeshAgent set on Context");
             return Result.FAILURE;
         }
 
-        if (context.Target == null)
-        {
-            context.Target = ResourceNodes[0];
-        }
+        // if (context.Target == null)
+        // {
+        //     context.Target = context.ResourceNodes[0];
+        //     return Result.RUNNING;
+        // }
 
-        for (int i = 0; i < ResourceNodes.Length; i++)
+        for (int i = 0; i < context.ResourceNodes.Length; i++)
         {
-            if (ResourceNodes[i] == null)
+            if (context.ResourceNodes[i] == null)
             {
-                Debug.LogError("The Target was not managed to be set correctly");
-                return Result.FAILURE;
+                continue;
+                //Debug.LogError("The Target was not managed to be set correctly");
+                //return Result.FAILURE;
             }
             Path = new NavMeshPath();
 
-            if (NavMesh.CalculatePath(transform.position, ResourceNodes[i].position, Agent.areaMask, Path))
+            if (NavMesh.CalculatePath(context.transform.position, context.ResourceNodes[i].position, context.navMeshAgent.areaMask, Path))
             {
-                float distance = Vector3.Distance(transform.position, Path.corners[0]);
+                float distance = Vector3.Distance(context.transform.position, Path.corners[0]);
 
                 for (int j = 1; j < Path.corners.Length; j++)
                 {
@@ -55,10 +55,10 @@ public class MoveToTarget : Leaf<Context>
             }
             if (ShortestPath != null)
             {
-                Agent.SetPath(ShortestPath);
+                context.navMeshAgent.SetPath(ShortestPath);
                 return Result.RUNNING;
             }
-            return Result.SUCCESS;
         }
+        return Result.SUCCESS;
     }
 }
