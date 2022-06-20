@@ -10,4 +10,7 @@ public class Context : MonoBehaviour
     public Animator animator;
     public Transform Target;
     public Transform[] ResourceNodes;
+    public int Wood;
+    public int Food;
+    public Collider AgentCollider;
 }

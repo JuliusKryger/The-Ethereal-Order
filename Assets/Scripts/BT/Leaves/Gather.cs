@@ -19,20 +19,25 @@ public class Gather : Leaf<Context>
             return Result.FAILURE;
         }
 
-        if (context.Target == null)
+        if (context.AgentCollider == null)
         {
-            Debug.LogError("Can't find any Target");
+            Debug.LogError("Seems to be a problem with the Agents Collider");
             return Result.FAILURE;
         }
 
-        moveToClosestTarget.ChoseResourceNode();
-        if ((context.transform.position - context.Target.position).magnitude > context.navMeshAgent.stoppingDistance)
+        if (context.AgentCollider.attachedRigidbody)
         {
-            return Result.RUNNING;
-        }
-
-        // TODO: Handle if can't reach destination = fail
-
+            Debug.LogError(context.AgentCollider.attachedRigidbody);
+            if (context.Food < 5)
+            { 
+                context.Food++;
+                return Result.RUNNING;
+            }
+            else if (context.Food == 5)
+            {
+                return Result.SUCCESS;
+            }
+        }   
         return Result.SUCCESS;
     }
 }

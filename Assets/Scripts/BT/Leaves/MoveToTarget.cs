@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -30,6 +31,15 @@ public class MoveToTarget : Leaf<Context>
 
         for (int i = 0; i < context.ResourceNodes.Length; i++)
         {
+            bool hasReachedDestination()
+            {
+                context.navMeshAgent.stoppingDistance = 2f; //<---Offset
+                if (context.navMeshAgent.remainingDistance <= 2f)
+                    return true;
+                else
+                    return false;        
+            }
+
             if (context.ResourceNodes[i] == null)
             {
                 continue;
@@ -56,8 +66,14 @@ public class MoveToTarget : Leaf<Context>
             if (ShortestPath != null)
             {
                 context.navMeshAgent.SetPath(ShortestPath);
+                //Debug.LogError(context.navMeshAgent.hasPath);
+                if (hasReachedDestination() == true)
+                {
+                    return Result.SUCCESS;
+                }
                 return Result.RUNNING;
             }
+            return Result.SUCCESS;
         }
         return Result.SUCCESS;
     }
