@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BT_Enemy01 : MonoBehaviour
+public class WoodGatherer : MonoBehaviour
 {
     private Context context;
     
@@ -11,8 +11,8 @@ public class BT_Enemy01 : MonoBehaviour
 
     List<Node<Context>> layer1 = new List<Node<Context>>();
 
-    //Node<Context> moveTo = new MoveTo();
-    //Node<Context> PrintShite = new PrintDisShite("Shite");
+    Node<Context> gather = new Gather();
+    Node<Context> deposit = new Deposit();
     //Node<Context> attackTarget = new AttackTarget();
     //Node<Context> findTargetInRange = new FindTargetInRange();
 
@@ -21,24 +21,24 @@ public class BT_Enemy01 : MonoBehaviour
     void Awake()
     {
     // layer 1
-        //layer1.Add(findTargetInRange);
-        //layer1.Add(moveTo);
+        layer1.Add(gather);
+        layer1.Add(deposit);
         //layer1.Add(attackTarget);
 
     // root
-        //root = new Sequence<Context>(layer1);
+        root = new Sequence<Context>(layer1);
 
-        //context = GetComponent<Context>();
+        context = GetComponent<Context>();
         
-        //StartCoroutine(Loop());
+        StartCoroutine(Loop());
     }
 
     IEnumerator Loop()
     {
         while (true)
         {
-            //yield return new WaitForSeconds(1);
-            //root.Run(context);
+            yield return new WaitForSeconds(1);
+            root.Run(context);
         }
     }
 }

@@ -7,6 +7,6 @@ public class Context : MonoBehaviour
 {
     public Transform transform;
     public NavMeshAgent navMeshAgent;
-    public Animator animator;
+    //public Animator animator;
     public Transform Target;
 }

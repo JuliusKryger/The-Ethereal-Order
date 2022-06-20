@@ -1,12 +1,14 @@
 using UnityEngine;
 using UnityEngine.AI;
 
-public class MoveToClosestTarget : MonoBehaviour
+public class AgentTargeting : MonoBehaviour
 {
 public Transform[] ResourceNodes;
 public NavMeshAgent Agent;
 
-public void ChoseResourceNode () 
+public GameObject GetTarget() => ChoseResourceNode();
+
+private GameObject ChoseResourceNode() 
 {
     float closestResourceNodeDistance = float.MaxValue;
     NavMeshPath Path = null;
@@ -22,6 +24,7 @@ public void ChoseResourceNode ()
 
         if (NavMesh.CalculatePath(transform.position, ResourceNodes[i].position, Agent.areaMask, Path))
         {
+            return ResourceNodes[i].position;
             float distance = Vector3.Distance(transform.position, Path.corners[0]);
 
             for (int j = 1; j < Path.corners.Length; j++)
@@ -36,10 +39,14 @@ public void ChoseResourceNode ()
             }
         }
     }
-    if (ShortestPath != null)
-    {
-        Agent.SetPath(ShortestPath);
-    }
+
+
+
+
+    // if (ShortestPath != null)
+    // {
+    //     Agent.SetPath(ShortestPath);
+    // }
 }
 //  This button is for testing if pathfinding works, it draws a button on play, when pressed the agent should run to nearest target.
 //private void OnGUI () 
