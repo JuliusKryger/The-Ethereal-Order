@@ -11,6 +11,6 @@ public class Context : MonoBehaviour
     public Transform Target;
     public Transform[] ResourceNodes;
     public int Wood;
-    public int Food;
+    public int Food; // Måske skaber dette problemer hvis vi har mere en 1 AI
     public Collider AgentCollider;
 }

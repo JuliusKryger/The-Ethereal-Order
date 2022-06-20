@@ -25,9 +25,9 @@ public class Gather : Leaf<Context>
             return Result.FAILURE;
         }
 
-        if (context.AgentCollider.attachedRigidbody)
+        if (context.AgentCollider.attachedRigidbody) // Det virker ikke da det ikke er i et for loop indtil den rammer 5
         {
-            Debug.LogError(context.AgentCollider.attachedRigidbody);
+            //Debug.LogError(context.AgentCollider.attachedRigidbody);
             if (context.Food < 5)
             { 
                 context.Food++;
