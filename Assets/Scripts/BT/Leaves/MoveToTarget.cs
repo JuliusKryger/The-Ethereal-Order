@@ -29,6 +29,8 @@ public class MoveToTarget : Leaf<Context>
         //     return Result.RUNNING;
         // }
 
+        
+
         for (int i = 0; i < context.ResourceNodes.Length; i++)
         {
             bool hasReachedDestination()
@@ -60,20 +62,19 @@ public class MoveToTarget : Leaf<Context>
                 if (distance < closestResourceNodeDistance)
                 {
                     closestResourceNodeDistance = distance;
-                    ShortestPath = Path;           
+                    ShortestPath = Path;         
                 }
             }
             if (ShortestPath != null)
             {
                 context.navMeshAgent.SetPath(ShortestPath);
-                Debug.Log(context.navMeshAgent.hasPath);
+                // Debug.Log(context.navMeshAgent.hasPath);
                 if (hasReachedDestination() == true)
                 {
                     return Result.SUCCESS;
                 }
-                return Result.RUNNING;
             }
-            return Result.SUCCESS;
+            //return Result.RUNNING;
         }
         return Result.SUCCESS;
     }

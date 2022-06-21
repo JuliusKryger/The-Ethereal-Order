@@ -37,7 +37,7 @@ public class FoodGatherer : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(2);
             root.Run(context);
         }
     }
