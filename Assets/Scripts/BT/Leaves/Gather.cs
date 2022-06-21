@@ -4,12 +4,18 @@ using UnityEngine;
 
 public class Gather : Leaf<Context>
 {
-    MoveToClosestTarget moveToClosestTarget;
-    public int food;
+    public static int food;
+
+    public static int GetFood () {
+        return food;
+    }
+
+    public static void SetFood (int amount) {
+        food = amount;
+    }
 
     public override Result Run(Context context) 
-    {
-        
+    {   
         if (context == null)
         {
             Debug.LogError("Context is null");
@@ -27,11 +33,11 @@ public class Gather : Leaf<Context>
             return Result.FAILURE;
         }
 
-        if (context.AgentCollider.attachedRigidbody) // Det virker ikke da det ikke er i et for loop indtil den rammer 5
+        if (context.AgentCollider.attachedRigidbody)
         {
-            //Debug.LogError(context.AgentCollider.attachedRigidbody);
             if (food < 5)
             { 
+                ResourceNode.GetResource();
                 food++;
                 Debug.Log("This is the AI's Food amount carried: " + food);
                 return Result.RUNNING;

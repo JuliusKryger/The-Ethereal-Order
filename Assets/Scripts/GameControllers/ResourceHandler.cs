@@ -12,6 +12,7 @@ public static class ResourceHandler
     public static void AddFoodAmount (int amount) //This method is called just before we reset our food amount from the deposit leaf.
     {
         foodAmount += amount;
+        Debug.Log("The current amount of food in storage" + foodAmount);
         if (OnFoodAmountChanged != null)
         {
             OnFoodAmountChanged(null, EventArgs.Empty);
