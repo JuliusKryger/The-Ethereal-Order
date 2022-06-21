@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ResourceNode
+public class ResourceNode : MonoBehaviour
 {
 
-    private static int resourceAmount = 4;
+    public static int resourceAmount = 4;
 
     public static void GetResource () 
     {

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Gather : Leaf<Context>
 {
-    public static int food;
+    private static int food;
 
     public static int GetFood () {
         return food;
