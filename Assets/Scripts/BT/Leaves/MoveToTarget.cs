@@ -66,7 +66,7 @@ public class MoveToTarget : Leaf<Context>
             if (ShortestPath != null)
             {
                 context.navMeshAgent.SetPath(ShortestPath);
-                //Debug.LogError(context.navMeshAgent.hasPath);
+                Debug.Log(context.navMeshAgent.hasPath);
                 if (hasReachedDestination() == true)
                 {
                     return Result.SUCCESS;

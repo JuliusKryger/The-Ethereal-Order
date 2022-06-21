@@ -2,21 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WoodGatherer : MonoBehaviour
+public class FoodGatherer : MonoBehaviour
 {
     private Context context;
-    
     Node<Context> root;
 
 
     List<Node<Context>> layer1 = new List<Node<Context>>();
 
-    Node<Context> gather = new Gather();
-    //Node<Context> deposit = new Deposit();
     Node<Context> moveToTarget = new MoveToTarget();
-    //Node<Context> findTargetInRange = new FindTargetInRange();
-
-
+    Node<Context> gather = new Gather();
+    Node<Context> findStorageTarget = new FindStorageTarget();
+    Node<Context> deposit = new Deposit();
 
     void Awake()
     {
@@ -25,6 +22,8 @@ public class WoodGatherer : MonoBehaviour
         //layer1.Add(deposit);
         layer1.Add(moveToTarget);
         layer1.Add(gather);
+        layer1.Add(findStorageTarget);
+        layer1.Add(deposit);
 
     // root
         root = new Sequence<Context>(layer1);
