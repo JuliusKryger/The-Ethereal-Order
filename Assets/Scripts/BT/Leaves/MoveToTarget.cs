@@ -5,9 +5,9 @@ using UnityEngine;
 using UnityEngine.AI;
 
 public class MoveToTarget : Leaf<Context>
-{
+{   
     public override Result Run(Context context) 
-    {
+    {   
         float closestResourceNodeDistance = float.MaxValue;
         NavMeshPath Path = null;
         NavMeshPath ShortestPath = null;
@@ -35,6 +35,7 @@ public class MoveToTarget : Leaf<Context>
         {
             bool hasReachedDestination()
             {
+                //FoodGatherer.GetAnim().SetBool("IsMoving",false);
                 context.navMeshAgent.stoppingDistance = 2f; //<---Offset
                 if (context.navMeshAgent.remainingDistance <= 2f)
                     return true;
@@ -67,6 +68,7 @@ public class MoveToTarget : Leaf<Context>
             }
             if (ShortestPath != null)
             {
+                context.animator.SetBool("IsMoving",true);
                 context.navMeshAgent.SetPath(ShortestPath);
                 // Debug.Log(context.navMeshAgent.hasPath);
                 if (hasReachedDestination() == true)
@@ -74,7 +76,7 @@ public class MoveToTarget : Leaf<Context>
                     return Result.SUCCESS;
                 }
             }
-            //return Result.RUNNING;
+            return Result.RUNNING;
         }
         return Result.SUCCESS;
     }

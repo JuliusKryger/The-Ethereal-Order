@@ -14,4 +14,9 @@ public class Context : MonoBehaviour
     public int Wood;
     public int Food; // Måske skaber dette problemer hvis vi har mere en 1 AI
     public Collider AgentCollider;
+
+    public void Awake () 
+    {
+        animator = GetComponentInChildren<Animator>();
+    }
 }

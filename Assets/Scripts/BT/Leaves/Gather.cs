@@ -5,6 +5,7 @@ using UnityEngine;
 public class Gather : Leaf<Context>
 {
     private static int food;
+    private int maxVal = 5;
 
     public static int GetFood () {
         return food;
@@ -35,14 +36,15 @@ public class Gather : Leaf<Context>
 
         if (context.AgentCollider.attachedRigidbody)
         {
-            if (food < 5)
+            if (food < maxVal)
             { 
-                ResourceNode.GetResource();
-                food++;
+                context.animator.SetBool("IsMoving",false);
+                //ResourceNode.GetResource();
+                food = food+1;
                 Debug.Log("This is the AI's Food amount carried: " + food);
                 return Result.RUNNING;
             }
-            else if (food == 5)
+            else if (food == maxVal)
             {
                 return Result.SUCCESS;
             }

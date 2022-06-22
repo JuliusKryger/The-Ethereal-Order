@@ -1,361 +1,37 @@
 fileFormatVersion: 2
-guid: ed17f8f03227a5949b94a5cb1e895a14
+guid: bd12a8daee094284591386cd5ebfbc3a
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable:
   - first:
-      1: 100000
-    second: Arm_L
+      74: 1827226128182048838
+    second: Running
   - first:
-      1: 100002
-    second: Arm_R
+      74: -203655887218126122
+    second: mixamo.com
   - first:
-      1: 100004
-    second: BN_Arm_R_Tw2
-  - first:
-      1: 100006
-    second: BN_Chest
-  - first:
-      1: 100008
-    second: BN_ForeArm_R_Tw1
-  - first:
-      1: 100010
-    second: BN_Hand_R
-  - first:
-      1: 100012
-    second: BN_Head
-  - first:
-      1: 100014
-    second: BN_Neck
-  - first:
-      1: 100016
-    second: BN_Shoulder_R
-  - first:
-      1: 100018
-    second: Character_Final_01
-  - first:
-      1: 100020
-    second: Chest
-  - first:
-      1: 100022
-    second: CTRL_Body
-  - first:
-      1: 100024
-    second: CTRL_Chest
-  - first:
-      1: 100026
-    second: CTRL_Main
-  - first:
-      1: 100028
-    second: CTRL_Spine
-  - first:
-      1: 100030
-    second: Fingers_L_1
-  - first:
-      1: 100032
-    second: Fingers_L_2
-  - first:
-      1: 100034
-    second: Fingers_L_3
-  - first:
-      1: 100036
-    second: Fingers_R_1
-  - first:
-      1: 100038
-    second: Fingers_R_2
-  - first:
-      1: 100040
-    second: Fingers_R_3
-  - first:
-      1: 100042
-    second: Foot_L
-  - first:
-      1: 100044
-    second: Foot_R
-  - first:
-      1: 100046
-    second: ForeArm_L
-  - first:
-      1: 100048
-    second: ForeArm_R
-  - first:
-      1: 100050
-    second: Hand_L
-  - first:
-      1: 100052
-    second: Hand_R
-  - first:
-      1: 100054
-    second: Hat_01
-  - first:
-      1: 100056
-    second: Head
-  - first:
-      1: 100058
-    second: Hips
-  - first:
-      1: 100060
-    second: Leg_L
-  - first:
-      1: 100062
-    second: Leg_R
-  - first:
-      1: 100064
-    second: Neck
-  - first:
-      1: 100066
-    second: //RootNode
-  - first:
-      1: 100068
-    second: Pitchfork
-  - first:
-      1: 100070
-    second: PT_BN_Arm_R
-  - first:
-      1: 100072
-    second: Shoulder_L
-  - first:
-      1: 100074
-    second: Shoulder_R
-  - first:
-      1: 100076
-    second: Spine
-  - first:
-      1: 100078
-    second: Thumb_L_1
-  - first:
-      1: 100080
-    second: Thumb_L_2
-  - first:
-      1: 100082
-    second: Thumb_L_3
-  - first:
-      1: 100084
-    second: Thumb_R_1
-  - first:
-      1: 100086
-    second: Thumb_R_2
-  - first:
-      1: 100088
-    second: Thumb_R_3
-  - first:
-      1: 100090
-    second: Toe_end_L
-  - first:
-      1: 100092
-    second: Toe_end_R
-  - first:
-      1: 100094
-    second: Toe_L
-  - first:
-      1: 100096
-    second: Toe_R
-  - first:
-      1: 100098
-    second: UpLeg_L
-  - first:
-      1: 100100
-    second: UpLeg_R
-  - first:
-      4: 400000
-    second: Arm_L
-  - first:
-      4: 400002
-    second: Arm_R
-  - first:
-      4: 400004
-    second: BN_Arm_R_Tw2
-  - first:
-      4: 400006
-    second: BN_Chest
-  - first:
-      4: 400008
-    second: BN_ForeArm_R_Tw1
-  - first:
-      4: 400010
-    second: BN_Hand_R
-  - first:
-      4: 400012
-    second: BN_Head
-  - first:
-      4: 400014
-    second: BN_Neck
-  - first:
-      4: 400016
-    second: BN_Shoulder_R
-  - first:
-      4: 400018
-    second: Character_Final_01
-  - first:
-      4: 400020
-    second: Chest
-  - first:
-      4: 400022
-    second: CTRL_Body
-  - first:
-      4: 400024
-    second: CTRL_Chest
-  - first:
-      4: 400026
-    second: CTRL_Main
-  - first:
-      4: 400028
-    second: CTRL_Spine
-  - first:
-      4: 400030
-    second: Fingers_L_1
-  - first:
-      4: 400032
-    second: Fingers_L_2
-  - first:
-      4: 400034
-    second: Fingers_L_3
-  - first:
-      4: 400036
-    second: Fingers_R_1
-  - first:
-      4: 400038
-    second: Fingers_R_2
-  - first:
-      4: 400040
-    second: Fingers_R_3
-  - first:
-      4: 400042
-    second: Foot_L
-  - first:
-      4: 400044
-    second: Foot_R
-  - first:
-      4: 400046
-    second: ForeArm_L
-  - first:
-      4: 400048
-    second: ForeArm_R
-  - first:
-      4: 400050
-    second: Hand_L
-  - first:
-      4: 400052
-    second: Hand_R
-  - first:
-      4: 400054
-    second: Hat_01
-  - first:
-      4: 400056
-    second: Head
-  - first:
-      4: 400058
-    second: Hips
-  - first:
-      4: 400060
-    second: Leg_L
-  - first:
-      4: 400062
-    second: Leg_R
-  - first:
-      4: 400064
-    second: Neck
-  - first:
-      4: 400066
-    second: //RootNode
-  - first:
-      4: 400068
-    second: Pitchfork
-  - first:
-      4: 400070
-    second: PT_BN_Arm_R
-  - first:
-      4: 400072
-    second: Shoulder_L
-  - first:
-      4: 400074
-    second: Shoulder_R
-  - first:
-      4: 400076
-    second: Spine
-  - first:
-      4: 400078
-    second: Thumb_L_1
-  - first:
-      4: 400080
-    second: Thumb_L_2
-  - first:
-      4: 400082
-    second: Thumb_L_3
-  - first:
-      4: 400084
-    second: Thumb_R_1
-  - first:
-      4: 400086
-    second: Thumb_R_2
-  - first:
-      4: 400088
-    second: Thumb_R_3
-  - first:
-      4: 400090
-    second: Toe_end_L
-  - first:
-      4: 400092
-    second: Toe_end_R
-  - first:
-      4: 400094
-    second: Toe_L
-  - first:
-      4: 400096
-    second: Toe_R
-  - first:
-      4: 400098
-    second: UpLeg_L
-  - first:
-      4: 400100
-    second: UpLeg_R
-  - first:
-      23: 2300000
-    second: Hat_01
-  - first:
-      23: 2300002
-    second: Pitchfork
-  - first:
-      33: 3300000
-    second: Hat_01
-  - first:
-      33: 3300002
-    second: Pitchfork
-  - first:
-      43: 4300000
-    second: Hat_01
-  - first:
-      43: 4300002
-    second: Pitchfork
-  - first:
-      43: 4300004
-    second: Character_Final_01
-  - first:
-      74: 7400000
-    second: Take 001
-  - first:
-      95: 9500000
-    second: //RootNode
-  - first:
-      137: 13700000
-    second: Character_Final_01
+      74: -3780516532778130023
+    second: mixamo.com (1)
   externalObjects: {}
   materials:
-    materialImportMode: 0
+    materialImportMode: 2
     materialName: 0
     materialSearch: 1
-    materialLocation: 0
+    materialLocation: 1
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
     resampleCurves: 1
-    optimizeGameObjects: 0
-    removeConstantScaleCurves: 0
+    optimizeGameObjects: 1
+    removeConstantScaleCurves: 1
     motionNodeName: 
     rigImportErrors: 
     rigImportWarnings: 
     animationImportErrors: 
-    animationImportWarnings: 
+    animationImportWarnings: "\nClip 'mixamo.com' has import animation warnings that
+      might lower retargeting quality:\nNote: Activate translation DOF on avatar
+      to improve retargeting quality.\n\t'Chest' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n"
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
@@ -365,10 +41,71 @@ ModelImporter:
     animationPositionError: 0.5
     animationScaleError: 0.5
     animationWrapMode: 0
-    extraExposedTransformPaths: []
+    extraExposedTransformPaths:
+    - CTRL_Main
+    - Hips
+    - Character_Final_01
     extraUserProperties: []
-    clipAnimations: []
-    isReadable: 1
+    clipAnimations:
+    - serializedVersion: 16
+      name: mixamo.com (1)
+      takeName: mixamo.com
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 37
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: mixamo.com
+      takeName: mixamo.com
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 37
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 0
   meshes:
     lODScreenPercentages: []
     globalScale: 1
@@ -376,12 +113,12 @@ ModelImporter:
     addColliders: 0
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1
-    importVisibility: 0
+    importVisibility: 1
     importBlendShapes: 1
-    importCameras: 0
-    importLights: 0
-    nodeNameCollisionStrategy: 0
-    fileIdsGeneration: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
@@ -394,11 +131,11 @@ ModelImporter:
     minBoneWeight: 0.001
     optimizeBones: 0
     meshOptimizationFlags: -1
-    indexFormat: 1
+    indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
-    secondaryUVMarginMethod: 0
+    secondaryUVMarginMethod: 1
     secondaryUVMinLightmapResolution: 40
     secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
@@ -407,15 +144,11 @@ ModelImporter:
     normalSmoothAngle: 60
     normalImportMode: 0
     tangentImportMode: 3
-    normalCalculationMode: 0
-    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
-  referencedClips:
-  - 58eaeda692883b54c9f392c35b6f6b8c
-  - 8681d7b9679774d47be379a19970b39e
-  - bd12a8daee094284591386cd5ebfbc3a
-  - 8f27468cfd278ac47894ce213c96b5ef
+  referencedClips: []
   importAnimation: 1
   humanDescription:
     serializedVersion: 3
@@ -944,12 +677,12 @@ ModelImporter:
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 0
-  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: ed17f8f03227a5949b94a5cb1e895a14, type: 3}
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 3
   humanoidOversampling: 1
-  avatarSetup: 1
-  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
+  avatarSetup: 2
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
   additionalBone: 0
   userData: 
   assetBundleName: 

@@ -65,6 +65,7 @@ public class FindStorageTarget : Leaf<Context>
             }
             if (ShortestPath != null)
             {
+                context.animator.SetBool("IsMoving",true);
                 context.navMeshAgent.SetPath(ShortestPath);
                 //Debug.LogError(context.navMeshAgent.hasPath);
                 if (hasReachedDestination() == true)
